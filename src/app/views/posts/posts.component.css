@@ -1,0 +1,27 @@
+mat-card {
+  margin-bottom: 2rem;
+}
+
+.post {
+  display: block;
+}
+
+.disabled {
+  display: none;
+}
+
+.options {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.mat-menu-content {
+  background-color: white;
+}

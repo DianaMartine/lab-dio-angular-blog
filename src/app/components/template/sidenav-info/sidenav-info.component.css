@@ -1,0 +1,47 @@
+.nav-container {
+  background-color: var(--darkest-grey);
+}
+
+.sidenav {
+  background-color: var(--darkest-grey);
+  width: calc(30% - 20px);
+  position: fixed;
+  top: 0;
+}
+
+.mat-nav-button-info {
+  margin-bottom: 1rem;
+  background-color: var(--dark-grey);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  width: 10rem;
+}
+
+.mat-nav-button {
+  margin: 1rem;
+  background-color: var(--dark-grey);
+  color: var(--red);
+  border: none;
+  border-radius: 50%;
+}
+
+.sidenav .mat-list p {
+  color: var(--white);
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.sidenav .mat-list i {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+::ng-deep .mat-drawer-backdrop.ng-star-inserted.mat-drawer-shown {
+  background-color: transparent;
+}
