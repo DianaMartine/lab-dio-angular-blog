@@ -12,6 +12,7 @@ import { SidenavInfoComponent } from './components/template/sidenav-info/sidenav
 import { PostsComponent } from './views/posts/posts.component';
 import { PostsButtonComponent } from './views/posts-button/posts-button.component';
 import { EditPostFormComponent } from './views/posts/edit-post-form/edit-post-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { EditPostFormComponent } from './views/posts/edit-post-form/edit-post-fo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
