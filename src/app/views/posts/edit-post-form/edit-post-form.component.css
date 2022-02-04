@@ -1,0 +1,29 @@
+mat-form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  margin: 0.5rem;
+}
+
+mat-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.textarea {
+  margin-top: 1rem;
+}
+
+.textareaContent {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 425px) {
+  ::ng-deep .mat-dialog-container {
+    width: 35rem;
+  }
+}

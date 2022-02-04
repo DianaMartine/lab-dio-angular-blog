@@ -1,0 +1,47 @@
+<mat-card>
+  <mat-card-title>
+    <h1>New Post</h1>
+  </mat-card-title>
+  <mat-card-subtitle>
+    <h2>What do you watching?</h2>
+  </mat-card-subtitle>
+  <mat-card-content>
+    <mat-form-field>
+      <mat-label>Your github user name</mat-label>
+      <input matInput [(ngModel)]="post.user" />
+      <mat-hint>Ex.: @john, @maria...</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Title of post</mat-label>
+      <input matInput [(ngModel)]="post.title" />
+      <mat-hint>Ex.: About Matrix 2021...</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Subtitle of post (optional)</mat-label>
+      <input matInput [(ngModel)]="post.subtitle" />
+      <mat-hint>Ex.: It's a good film?</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="textarea">
+      <mat-label>Write about do you watching...</mat-label>
+      <textarea
+        matInput
+        class="textareaContent"
+        [(ngModel)]="post.postContent"
+      ></textarea>
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button
+      mat-button
+      color="primary"
+      (click)="publish()"
+      [disabled]="post.user && post.title && post.postContent ? false : true"
+    >
+      Publish <i class="material-icons">rate_review</i>
+    </button>
+    <button mat-button color="warn" (click)="cancel()">
+      {{ post.postContent == "" ? "Back" : "Cancel" }}
+      <i class="material-icons">cancel</i>
+    </button>
+  </mat-card-actions>
+</mat-card>

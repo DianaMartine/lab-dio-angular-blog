@@ -1,0 +1,67 @@
+h1 {
+  font-size: 2em;
+  font-weight: bolder;
+  color: var(--white);
+  position: absolute;
+  margin: 2.5rem 2rem;
+  animation: backgroundFadeIn 2s;
+  opacity: 0.8;
+}
+
+h1:hover {
+  opacity: 1;
+}
+
+.card-actions {
+  margin: 10rem 30px;
+  position: absolute;
+  width: 80vw;
+}
+
+.card-posts {
+  margin: 20rem 30px;
+  position: absolute;
+  width: 80vw;
+}
+
+.sidenav-info {
+  display: none;
+}
+
+::ng-deep .mat-card {
+  background-color: var(--white);
+}
+
+::ng-deep .mat-dialog-container {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    margin: 11.5rem 50px;
+  }
+
+  .card-actions {
+    margin: 300px 0 0 50px;
+    width: 65vw;
+  }
+
+  .card-posts {
+    margin: 450px 0 0 50px;
+    width: 65vw;
+  }
+
+  .sidenav-info {
+    display: flex;
+    margin-top: 300px;
+    right: 40px;
+    width: 22vw;
+    position: fixed;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+  }
+}

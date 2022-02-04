@@ -1,0 +1,47 @@
+<mat-card
+  *ngFor="let post of posts"
+  class="post"
+  [class.disabled]="posts.length === 0"
+>
+  <button mat-icon-button class="options" [matMenuTriggerFor]="afterMenu">
+    <i class="material-icons">more_vert</i>
+  </button>
+
+  <mat-menu
+    class="mat-menu-content active"
+    #afterMenu="matMenu"
+    xPosition="before"
+  >
+    <button mat-menu-item (click)="delete(post)">
+      <mat-icon>delete</mat-icon>
+      <span>Delete</span>
+    </button>
+    <button mat-menu-item (click)="update(post)">
+      <mat-icon>edit</mat-icon>
+      <span>Edit</span>
+    </button>
+  </mat-menu>
+
+  <mat-card-header>
+    <img
+      mat-card-avatar
+      src="https://www.github.com/{{ post.user }}.png"
+      alt="user"
+    />
+    <mat-card-title>
+      <h1>{{ post.title }}</h1>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <h3>@{{ post.user }}</h3>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <h3>{{ post.subtitle }}</h3>
+    <p>
+      {{ post.postContent }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <app-posts-button></app-posts-button>
+  </mat-card-actions>
+</mat-card>

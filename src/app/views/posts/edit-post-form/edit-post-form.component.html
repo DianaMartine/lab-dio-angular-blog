@@ -1,0 +1,51 @@
+<mat-card>
+  <mat-card-title>
+    <h1>Edit Post</h1>
+  </mat-card-title>
+  <mat-card-content>
+    <mat-form-field>
+      <mat-label>Your github user name</mat-label>
+      <input matInput disabled [(ngModel)]="editedPost.user" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Title of post</mat-label>
+      <input matInput [(ngModel)]="editedPost.title" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Subtitle of post</mat-label>
+      <input matInput [(ngModel)]="editedPost.subtitle" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="textarea">
+      <mat-label>Edit your text:</mat-label>
+      <textarea
+        matInput
+        class="textareaContent"
+        [(ngModel)]="editedPost.postContent"
+      ></textarea>
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button
+      mat-button
+      color="primary"
+      (click)="update()"
+      [disabled]="
+        editedPost.user && editedPost.title && editedPost.postContent
+          ? false
+          : true
+      "
+    >
+      Publish <i class="material-icons">rate_review</i>
+    </button>
+    <button mat-button color="warn" (click)="cancelUpdate()">
+      {{
+        editedPost.title == selectedPost.title &&
+        editedPost.subtitle == selectedPost.subtitle &&
+        editedPost.postContent == selectedPost.postContent
+          ? "Back"
+          : "Cancel"
+      }}
+      <i class="material-icons">cancel</i>
+    </button>
+  </mat-card-actions>
+</mat-card>

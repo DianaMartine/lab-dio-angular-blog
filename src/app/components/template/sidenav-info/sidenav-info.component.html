@@ -1,0 +1,31 @@
+<mat-sidenav-container class="nav-container">
+  <mat-sidenav
+    #sidenav
+    class="sidenav"
+    mode="push"
+    closed
+    fixedInViewport="true"
+    position="end"
+  >
+    <button mat-icon-button (click)="sidenav.toggle()" class="mat-nav-button">
+      <i class="material-icons">close</i>
+    </button>
+    <mat-list class="mat-list">
+      <p>
+        This project is a blog example created with Angular framework, like a
+        lab challenge in DIO.
+      </p>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button
+      mat-icon-button
+      (click)="sidenav.toggle()"
+      class="mat-nav-button-info"
+    >
+      <i class="material-icons">info</i>&nbsp;
+      <span>About this page!</span>
+    </button>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

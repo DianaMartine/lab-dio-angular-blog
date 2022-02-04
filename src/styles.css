@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #f2f2f2;
+  --black: #000;
+  --dark-grey: #2c2c2c;
+  --darkest-grey: #202020;
+  --red: #e83f5b;
+  --green: #4cd62b;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+  background-color: var(--darkest-grey);
+}
+
+.msg-error {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.msg-success {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: var(--darkest-grey);
+    background-image: url(assets/img/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 25rem;
+    background-position-x: calc(100% - 20px);
+    background-position-y: 15rem;
+    animation: backgroundFadeIn 2s;
+  }
+
+  @keyframes backgroundFadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
